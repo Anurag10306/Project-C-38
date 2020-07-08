@@ -1,0 +1,105 @@
+body {
+  background: #fafafa;
+  font-family: "Open Sans","Trebuchet MS",Helvetica,sans-serif;
+  margin: auto;
+  margin-top:11vh;
+  text-align: center;
+}
+
+h2{
+  margin: 10px;
+}
+/* Scoreboard */
+.scoreboard{
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ------------------ */
+/* Main Content */
+/* ------------------ */
+.container {
+  border-bottom: #ce0f00 5px solid;
+  height:360px;
+  margin: 10% auto;
+  margin-top:0;
+  position: relative;
+  width:90vw;
+}
+
+
+/* Background */
+.background-container{
+  height:360px;
+  overflow: hidden;
+  width:90vw;
+}
+.sliding-background{
+  animation: slide 60s linear infinite;
+  background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255, 0.1)), url("../images/clouds-background.png");
+  height: 1000px;
+  width:5760px;
+}
+
+/* Player character*/
+.character{
+  background-position: bottom;
+  background-size: contain;
+  bottom: 0;
+  display:flex;
+  height:100px;
+  left: 100px;
+  position: absolute;
+  width:40px;
+}
+.player{
+  position:absolute;
+  width:60px;
+}
+
+/* Obstacles */
+.barrier{
+  background-position: bottom;
+  background-size: contain;
+  bottom: 0;
+  left: 90%;
+  position: absolute;
+}
+
+/* Restart Game */
+#restart{
+  bottom: 250px;
+  font-size: 20px;
+  position: relative;
+}
+
+/* Change character buttons */
+.buttons{
+  display:flex;
+  justify-content:center;
+  margin: auto;
+  width:40vw;
+
+}
+.btn{
+  background: blue;
+  border: blue 1px solid;
+  border-radius: 10%;
+  color: white;
+  margin: 0 3px;
+  padding: 10px;
+  text-align: center;
+  width: 80px;
+}
+
+/* Animations */
+@keyframes slide {
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1920px, 0, 0); /* The image width */
+  }
+}
